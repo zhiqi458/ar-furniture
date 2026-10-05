@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #333;
+    background-color: var(--bg-light);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    padding: 3rem 1rem;
+    border-radius: 12px;
+}
+
+.product-card {
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+model-viewer {
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    --poster-color: transparent;
+}
+
+.qr-container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .qr-block {
+        display: none; /* 移动端访问时隐藏 QR 码 */
+    }
+    model-viewer {
+        height: 380px;
+    }
+}
